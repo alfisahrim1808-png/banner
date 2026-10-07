@@ -3,71 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAFIATOTO - Banner Promosi Resmi</title>
+    <title>MAFIATOTO - Situs Resmi Banner Promosi Eksklusif</title>
     
-    <!-- Kode Verifikasi Google Search Console -->
-    <meta name="google-site-verification" content="a6c87b288dad84e4" />
-
-    <!-- Meta Tags SEO untuk Pencarian -->
-    <meta name="description" content="Situs resmi banner promosi MAFIATOTO gacor maxwin setiap hari. Mainkan game seru dengan karakter Hinata dan dapatkan kemenangan besar sekarang!">
+    <!-- Meta Tags SEO -->
+    <meta name="description" content="Situs resmi banner promosi MAFIATOTO gacor maxwin setiap hari dengan pengalaman visual mewah dan pelayanan terbaik.">
     <meta name="keywords" content="mafiatoto, slot gacor, link alternatif mafiatoto, banner mafiatoto, situs resmi mafiatoto">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
+
         body, html {
             width: 100%;
             height: 100vh;
             overflow: hidden;
-            background-color: #0b0f19;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #05070b;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
+        /* Container Utama dengan Efek Glassmorphism & Border Mewah */
         .banner-container {
             position: relative;
             width: 100%;
-            max-width: 480px;
+            max-width: 450px;
             height: 100vh;
             max-height: 850px;
-            background: linear-gradient(135deg, #1a1c29 0%, #0b0f19 100%);
+            background: radial-gradient(circle at center, #1a2238 0%, #080b12 100%);
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-            border: 2px solid #ff4757;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(255, 215, 0, 0.15);
+            border: 2px solid rgba(255, 215, 0, 0.4);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
             text-decoration: none;
+            border-radius: 12px;
         }
-        /* Marquee / Teks Berjalan */
+
+        /* Header Marquee Mewah dengan Gradasi Emas & Merah Mewah */
+        .marquee-wrapper {
+            width: 100%;
+            background: linear-gradient(90deg, #b31217, #e52d27, #ffd700, #e52d27, #b31217);
+            background-size: 300% 100%;
+            animation: goldShine 6s linear infinite;
+            padding: 10px 0;
+            box-shadow: 0 4px 15px rgba(229, 45, 39, 0.5);
+            z-index: 10;
+        }
+
+        @keyframes goldShine {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         .marquee-container {
             width: 100%;
-            background: rgba(255, 71, 87, 0.9);
-            color: #fff;
-            padding: 8px 0;
-            font-weight: bold;
-            font-size: 14px;
-            letter-spacing: 1px;
             overflow: hidden;
             white-space: nowrap;
-            z-index: 10;
-            box-shadow: 0 4px 10px rgba(255, 71, 87, 0.4);
         }
+
         .marquee-text {
             display: inline-block;
-            animation: marquee 12s linear infinite;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            animation: marquee 14s linear infinite;
         }
+
         @keyframes marquee {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
-        /* Konten Tengah (Hinata & Efek) */
+
+        /* Area Konten & Karakter */
         .content-area {
             position: relative;
             flex: 1;
@@ -75,93 +96,137 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 20px 0;
         }
+
         .character-img {
-            width: 85%;
-            max-height: 75vh;
+            width: 90%;
+            max-height: 70vh;
             object-fit: contain;
-            filter: drop-shadow(0 0 15px rgba(255, 71, 87, 0.6));
-            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.4));
+            animation: floatSmooth 4s ease-in-out infinite;
             z-index: 3;
         }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+        @keyframes floatSmooth {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-12px) scale(1.02); }
         }
-        /* Partikel Sederhana */
+
+        /* Partikel Berkilau Emas Di background */
         .particle {
             position: absolute;
-            background: #ff4757;
+            background: radial-gradient(circle, #fff 0%, #ffd700 70%, transparent 100%);
             border-radius: 50%;
-            animation: rise 4s linear infinite;
-            opacity: 0.7;
+            animation: riseParticle linear infinite;
+            opacity: 0.8;
             z-index: 2;
         }
-        @keyframes rise {
+
+        @keyframes riseParticle {
             0% { transform: translateY(100vh) scale(0); opacity: 0; }
-            50% { opacity: 0.8; }
-            100% { transform: translateY(-20vh) scale(1); opacity: 0; }
+            30% { opacity: 0.9; }
+            100% { transform: translateY(-15vh) scale(1.2); opacity: 0; }
         }
-        /* Tombol & Watermark */
+
+        /* Tombol CTA (Call To Action) Ekstrem Mewah */
+        .cta-container {
+            width: 100%;
+            padding: 0 20px 25px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10;
+        }
+
         .cta-button {
-            background: linear-gradient(45deg, #ff4757, #ff6b81);
-            color: white;
-            padding: 12px 30px;
+            position: relative;
+            width: 100%;
+            background: linear-gradient(135deg, #ffd700 0%, #ff8c00 50%, #ff4500 100%);
+            color: #1a0800;
+            padding: 16px 0;
             font-size: 18px;
-            font-weight: bold;
-            border-radius: 30px;
-            box-shadow: 0 5px 15px rgba(255, 71, 87, 0.5);
-            margin-bottom: 20px;
-            z-index: 10;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        .watermark {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.4);
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            z-index: 10;
+            font-weight: 800;
+            text-align: center;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(255, 140, 0, 0.6), inset 0 2px 3px rgba(255, 255, 255, 0.6);
+            letter-spacing: 1px;
             text-transform: uppercase;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            animation: pulseGlow 2s infinite;
+        }
+
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(60deg, transparent, rgba(255,255,255,0.4), transparent);
+            transform: rotate(30deg) translateX(-100%);
+            animation: shineEffect 3s infinite;
+        }
+
+        @keyframes shineEffect {
+            0% { transform: rotate(30deg) translateX(-100%); }
+            20% { transform: rotate(30deg) translateX(100%); }
+            100% { transform: rotate(30deg) translateX(100%); }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); box-shadow: 0 10px 25px rgba(255, 140, 0, 0.6); }
+            50% { transform: scale(1.03); box-shadow: 0 15px 35px rgba(255, 215, 0, 0.8); }
+        }
+
+        /* Watermark Elegan */
+        .watermark {
+            margin-top: 15px;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
 
     <a href="https://ln.run/HFWyc" target="_blank" class="banner-container">
-        <!-- Marquee Teks Berjalan -->
-        <div class="marquee-container">
-            <div class="marquee-text">🔥 SELAMAT DATANG DI MAFIATOTO - SITUS TERPERCAYA, GACOR SETIAP HARI, MENANGKAN HADIAH UTAMA SEKARANG! 🔥</div>
+        <!-- Marquee Teks Berjalan Mewah -->
+        <div class="marquee-wrapper">
+            <div class="marquee-container">
+                <div class="marquee-text">⭐ SELAMAT DATANG DI SITUS RESMI MAFIATOTO - SLOT GACOR MAXWIN SETIAP HARI DENGAN HADIAH TERBESAR! ⭐</div>
+            </div>
         </div>
 
-        <!-- Area Gambar & Partikel -->
+        <!-- Area Gambar & Partikel Dinamis -->
         <div class="content-area" id="particle-area">
             <img src="hinata.jpg" alt="Hinata MAFIATOTO" class="character-img">
         </div>
 
-        <!-- Tombol Aksi -->
-        <div class="cta-button">DAFTAR & MAIN SEKARANG</div>
-
-        <!-- Watermark -->
-        <div class="watermark">KENMAFIA</div>
+        <!-- Bagian Tombol Interaktif -->
+        <div class="cta-container">
+            <div class="cta-button">DAFTAR & MAIN SEKARANG</div>
+            <div class="watermark">KENMAFIA EXCLUSIVE</div>
+        </div>
     </a>
 
     <script>
-        // Script Generator Partikel Otomatis
+        // Generator Partikel Berkilau (Aman & Ringan Tanpa Bug)
         const area = document.getElementById('particle-area');
-        for (let i = 0; i < 20; i++) {
+        const particleCount = 18;
+        
+        for (let i = 0; i < particleCount; i++) {
             let p = document.createElement('div');
             p.className = 'particle';
-            let size = Math.random() * 6 + 2;
+            let size = Math.random() * 5 + 3;
             p.style.width = size + 'px';
             p.style.height = size + 'px';
             p.style.left = Math.random() * 100 + '%';
-            p.style.animationDuration = (Math.random() * 3 + 2) + 's';
-            p.style.animationDelay = (Math.random() * 2) + 's';
+            p.style.animationDuration = (Math.random() * 3 + 2.5) + 's';
+            p.style.animationDelay = (Math.random() * 3) + 's';
             area.appendChild(p);
         }
     </script>
