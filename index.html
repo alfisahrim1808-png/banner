@@ -3,189 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banner Promosi MAFIATOTO - Hinata Live</title>
+    <title>MAFIATOTO - Banner Promosi Resmi</title>
+    <!-- Meta Tags SEO untuk Pencarian -->
+    <meta name="description" content="Situs resmi banner promosi MAFIATOTO gacor maxwin setiap hari. Mainkan game seru dengan karakter Hinata dan dapatkan kemenangan besar sekarang!">
+    <meta name="keywords" content="mafiatoto, slot gacor, link alternatif mafiatoto, banner mafiatoto, situs resmi mafiatoto">
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
-            background-color: #0f1020;
+            box-sizing: border-box;
+        }
+        body, html {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #0b0f19;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         .banner-container {
             position: relative;
-            width: 900px;
-            height: 500px;
-            border: 4px solid #ffcc00;
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(255, 204, 0, 0.6);
+            width: 100%;
+            max-width: 480px;
+            height: 100vh;
+            max-height: 850px;
+            background: linear-gradient(135deg, #1a1c29 0%, #0b0f19 100%);
             overflow: hidden;
-            background-color: #16182e;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            border: 2px solid #ff4757;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
             cursor: pointer;
-            animation: borderGlow 3s infinite alternate;
+            text-decoration: none;
         }
-
-        @keyframes borderGlow {
-            0% {
-                border-color: #ffcc00;
-                box-shadow: 0 0 15px rgba(255, 204, 0, 0.4), inset 0 0 15px rgba(255, 204, 0, 0.2);
-            }
-            100% {
-                border-color: #00ffff;
-                box-shadow: 0 0 35px rgba(0, 255, 255, 0.8), inset 0 0 25px rgba(0, 255, 255, 0.4);
-            }
-        }
-
-        /* Gambar Hinata bernapas hidup */
-        .banner-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
+        /* Marquee / Teks Berjalan */
+        .marquee-container {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-            animation: liveBreathing 4s ease-in-out infinite;
-        }
-
-        @keyframes liveBreathing {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-        }
-
-        /* Kanvas Partikel */
-        canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        /* Area Teks Berjalan dan Watermark */
-        .bottom-overlay {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            border-top: 2px solid #ffcc00;
+            background: rgba(255, 71, 87, 0.9);
+            color: #fff;
             padding: 8px 0;
-            z-index: 3;
-        }
-
-        /* Teks Berjalan */
-        .marquee-box {
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
             overflow: hidden;
-            width: 100%;
+            white-space: nowrap;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(255, 71, 87, 0.4);
         }
-
         .marquee-text {
             display: inline-block;
-            white-space: nowrap;
             animation: marquee 12s linear infinite;
-            color: #ffcc00;
-            font-size: 16px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            text-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
-            margin-bottom: 5px; /* Jarak antara teks berjalan dan watermark */
         }
-
         @keyframes marquee {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
-
-        /* Watermark KENMAFIA (di bawah teks berjalan) */
-        .watermark {
-            color: rgba(255, 255, 255, 0.7); /* Warna putih agak transparan */
-            font-size: 12px; /* Ukuran font 12px */
-            font-weight: normal;
-            text-transform: uppercase; /* Memastikan huruf KAPITAL SEMUA */
-            letter-spacing: 1px;
-            text-align: center;
+        /* Konten Tengah (Hinata & Efek) */
+        .content-area {
+            position: relative;
+            flex: 1;
             width: 100%;
-            display: block;
-            margin-top: -2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .character-img {
+            width: 85%;
+            max-height: 75vh;
+            object-fit: contain;
+            filter: drop-shadow(0 0 15px rgba(255, 71, 87, 0.6));
+            animation: float 3s ease-in-out infinite;
+            z-index: 3;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        /* Partikel Sederhana */
+        .particle {
+            position: absolute;
+            background: #ff4757;
+            border-radius: 50%;
+            animation: rise 4s linear infinite;
+            opacity: 0.7;
+            z-index: 2;
+        }
+        @keyframes rise {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(-20vh) scale(1); opacity: 0; }
+        }
+        /* Tombol & Watermark */
+        .cta-button {
+            background: linear-gradient(45deg, #ff4757, #ff6b81);
+            color: white;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(255, 71, 87, 0.5);
+            margin-bottom: 20px;
+            z-index: 10;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .watermark {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            z-index: 10;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
-    <!-- Seluruh area banner dibungkus fungsi klik -->
-    <div class="banner-container" onclick="bukaLinkAlternatif()">
-        <!-- Gambar Hinata Lokal -->
-        <img class="banner-bg" src="hinata.jpg" alt="Hinata Banner" onerror="this.src='hinata.jpeg'">
-        
-        <!-- Kanvas Animasi Cahaya -->
-        <canvas id="particleCanvas"></canvas>
-        
-        <!-- Area Bawah (Overlay) -->
-        <div class="bottom-overlay">
-            <!-- Teks Berjalan -->
-            <div class="marquee-box">
-                <div class="marquee-text">
-                    🔥 MAFIATOTO SITUS GACOR • MAXWIN SETIAP HARI • KLIK BANNER INI UNTUK DAFTAR & RAIH KEMENANGANMU! 🔥
-                </div>
-            </div>
-            <!-- Watermark KENMAFIA -->
-            <span class="watermark">kenmafia</span>
+    <a href="https://ln.run/HFWyc" target="_blank" class="banner-container">
+        <!-- Marquee Teks Berjalan -->
+        <div class="marquee-container">
+            <div class="marquee-text">🔥 SELAMAT DATANG DI MAFIATOTO - SITUS TERPERCAYA, GACOR SETIAP HARI, MENANGKAN HADIAH UTAMA SEKARANG! 🔥</div>
         </div>
-    </div>
+
+        <!-- Area Gambar & Partikel -->
+        <div class="content-area" id="particle-area">
+            <img src="hinata.jpg" alt="Hinata MAFIATOTO" class="character-img">
+        </div>
+
+        <!-- Tombol Aksi -->
+        <div class="cta-button">DAFTAR & MAIN SEKARANG</div>
+
+        <!-- Watermark -->
+        <div class="watermark">KENMAFIA</div>
+    </a>
 
     <script>
-        // Fungsi untuk mengarahkan ke link alternatif di tab baru saat banner diklik
-        function bukaLinkAlternatif() {
-            window.open("https://ln.run/HFWyc", "_blank");
+        // Script Generator Partikel Otomatis
+        const area = document.getElementById('particle-area');
+        for (let i = 0; i < 20; i++) {
+            let p = document.createElement('div');
+            p.className = 'particle';
+            let size = Math.random() * 6 + 2;
+            p.style.width = size + 'px';
+            p.style.height = size + 'px';
+            p.style.left = Math.random() * 100 + '%';
+            p.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            p.style.animationDelay = (Math.random() * 2) + 's';
+            area.appendChild(p);
         }
-
-        const canvas = document.getElementById("particleCanvas");
-        const ctx = canvas.getContext("2d");
-
-        function resizeCanvas() {
-            canvas.width = canvas.parentElement.offsetWidth;
-            canvas.height = canvas.parentElement.offsetHeight;
-        }
-        resizeCanvas();
-
-        let particles = [];
-        for (let i = 0; i < 45; i++) {
-            particles.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                radius: Math.random() * 2.5 + 1,
-                speedX: (Math.random() - 0.5) * 0.8,
-                speedY: (Math.random() - 0.5) * 0.8,
-                color: Math.random() > 0.4 ? '#ffcc00' : '#00ffff'
-            });
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => {
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                ctx.fillStyle = p.color;
-                ctx.shadowBlur = 12;
-                ctx.shadowColor = p.color;
-                ctx.fill();
-
-                p.x += p.speedX;
-                p.y += p.speedY;
-
-                if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
-                if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
-            });
-            requestAnimationFrame(animate);
-        }
-        animate();
     </script>
 
 </body>
